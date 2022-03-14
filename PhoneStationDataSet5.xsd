@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PhoneStationDataSet5" targetNamespace="http://tempuri.org/PhoneStationDataSet5.xsd" xmlns:mstns="http://tempuri.org/PhoneStationDataSet5.xsd" xmlns="http://tempuri.org/PhoneStationDataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PhoneStationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PhoneStationConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PhoneStation.Properties.Settings.GlobalReference.Default.PhoneStationConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AbonentTableAdapter" GeneratorDataComponentClassName="AbonentTableAdapter" Name="Abonent" UserDataComponentName="AbonentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PhoneStationConnectionString (Settings)" DbObjectName="PhoneStation.dbo.Abonent" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT name, birthday, passport, phone_number, date_of_connection, isConnected FROM dbo.Abonent</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="birthday" DataSetColumn="birthday" />
+              <Mapping SourceColumn="passport" DataSetColumn="passport" />
+              <Mapping SourceColumn="phone_number" DataSetColumn="phone_number" />
+              <Mapping SourceColumn="date_of_connection" DataSetColumn="date_of_connection" />
+              <Mapping SourceColumn="isConnected" DataSetColumn="isConnected" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PhoneStationDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PhoneStationDataSet5" msprop:Generator_UserDSName="PhoneStationDataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Abonent" msprop:Generator_TableClassName="AbonentDataTable" msprop:Generator_TableVarName="tableAbonent" msprop:Generator_TablePropName="Abonent" msprop:Generator_RowDeletingName="AbonentRowDeleting" msprop:Generator_RowChangingName="AbonentRowChanging" msprop:Generator_RowEvHandlerName="AbonentRowChangeEventHandler" msprop:Generator_RowDeletedName="AbonentRowDeleted" msprop:Generator_UserTableName="Abonent" msprop:Generator_RowChangedName="AbonentRowChanged" msprop:Generator_RowEvArgName="AbonentRowChangeEvent" msprop:Generator_RowClassName="AbonentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="birthday" msprop:Generator_ColumnVarNameInTable="columnbirthday" msprop:Generator_ColumnPropNameInRow="birthday" msprop:Generator_ColumnPropNameInTable="birthdayColumn" msprop:Generator_UserColumnName="birthday" type="xs:dateTime" />
+              <xs:element name="passport" msprop:Generator_ColumnVarNameInTable="columnpassport" msprop:Generator_ColumnPropNameInRow="passport" msprop:Generator_ColumnPropNameInTable="passportColumn" msprop:Generator_UserColumnName="passport" type="xs:int" />
+              <xs:element name="phone_number" msprop:Generator_ColumnVarNameInTable="columnphone_number" msprop:Generator_ColumnPropNameInRow="phone_number" msprop:Generator_ColumnPropNameInTable="phone_numberColumn" msprop:Generator_UserColumnName="phone_number" type="xs:int" />
+              <xs:element name="date_of_connection" msprop:Generator_ColumnVarNameInTable="columndate_of_connection" msprop:Generator_ColumnPropNameInRow="date_of_connection" msprop:Generator_ColumnPropNameInTable="date_of_connectionColumn" msprop:Generator_UserColumnName="date_of_connection" type="xs:dateTime" />
+              <xs:element name="isConnected" msprop:Generator_ColumnVarNameInTable="columnisConnected" msprop:Generator_ColumnPropNameInRow="isConnected" msprop:Generator_ColumnPropNameInTable="isConnectedColumn" msprop:Generator_UserColumnName="isConnected" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
